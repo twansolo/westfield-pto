@@ -21,7 +21,8 @@ const navigation = [
     name: "Resources",
     href: "/resources",
     children: [
-      { name: "Documents", href: "/resources/documents" },
+      { name: "Meeting Minutes", href: "/resources/documents" },
+      { name: "Consumer Fundraisers", href: "/resources/fundraisers" },
       { name: "Forms", href: "/resources/forms" },
       { name: "Budgets", href: "/resources/budgets" },
       { name: "Useful Links", href: "/resources/links" },

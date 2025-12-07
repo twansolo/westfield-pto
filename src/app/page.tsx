@@ -36,13 +36,14 @@ export default async function HomePage() {
         <div className="absolute inset-0 bg-white/85" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight font-[family-name:var(--font-playfair)]">
-            <span className="text-foreground">Building</span>
-            <br />
-            <span className="text-foreground">Tomorrow&apos;s</span>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground font-[family-name:var(--font-playfair)]">
+            Westfield Elementary PTO
+          </h1>
+          <h2 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight font-[family-name:var(--font-playfair)]">
+            <span className="text-foreground">Building Tomorrow&apos;s</span>
             <br />
             <span className="text-primary">Leaders Today</span>
-          </h1>
+          </h2>
 
           <p className="mt-6 sm:mt-8 text-lg sm:text-xl text-muted max-w-2xl mx-auto leading-relaxed">
             {settings?.homeHeroSubtitle ||
@@ -183,7 +184,7 @@ export default async function HomePage() {
                   href="/volunteer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-colors text-sm"
                 >
-                  Volunteer Sign-Up
+                  Volunteer Interest Form
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -203,7 +204,7 @@ export default async function HomePage() {
                   </div>
                   <div>
                     <p className="font-medium text-foreground text-sm">Newsletter Sign-Up</p>
-                    <p className="text-xs text-muted">Stay updated on events</p>
+                    <p className="text-xs text-muted">1–2 emails/month with events & reminders</p>
                   </div>
                 </Link>
                 <a

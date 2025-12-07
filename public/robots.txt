@@ -5,3 +5,5 @@ Allow: /
 # Disallow admin redirect
 Disallow: /admin
 
+# Sitemap
+Sitemap: https://westfieldpto.com/sitemap.xml

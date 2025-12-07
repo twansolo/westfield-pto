@@ -136,3 +136,14 @@ export const meetingMinutesByYearQuery = groq`
   }
 `
 
+// Committee Chairs
+export const committeeChairsQuery = groq`
+  *[_type == "committeeChair"] | order(sortOrder asc, committeeName asc) {
+    _id,
+    committeeName,
+    chairs,
+    note,
+    sortOrder
+  }
+`
+

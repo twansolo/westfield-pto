@@ -7,5 +7,5 @@ export { projectId, dataset, apiVersion } from './config'
 export * from './queries'
 
 // TypeScript types
-export type { SiteSettings, Event, Announcement, BoardMember, MeetingMinutes } from './types'
+export type { SiteSettings, Event, Announcement, BoardMember, MeetingMinutes, CommitteeChair } from './types'
 

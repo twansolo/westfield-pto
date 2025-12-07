@@ -53,3 +53,11 @@ export interface MeetingMinutes {
   fileSize?: string
 }
 
+export interface CommitteeChair {
+  _id: string
+  committeeName: string
+  chairs: string
+  note?: string
+  sortOrder: number
+}
+

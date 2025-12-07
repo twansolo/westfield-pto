@@ -162,18 +162,18 @@ export default async function HomePage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground">Get Involved</h3>
+                  <h3 className="text-lg font-semibold text-foreground">Volunteer With Us</h3>
                 </div>
                 <p className="text-muted text-sm mb-4">
-                  Looking for ways to get involved? Check out our committees—all welcome extra help!
+                  Looking for ways to get involved? Sign up to volunteer—all committees welcome extra help!
                 </p>
                 <Link
-                  href="/about"
-                  className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary-dark transition-colors text-sm"
+                  href="/volunteer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-colors text-sm"
                 >
-                  View Chairs & Officers
+                  Volunteer Sign-Up
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Link>
               </div>
@@ -181,7 +181,7 @@ export default async function HomePage() {
               {/* Stay Connected */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="/contact"
+                  href="/newsletter"
                   className="flex-1 flex items-center gap-3 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
                 >
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -190,7 +190,7 @@ export default async function HomePage() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-medium text-foreground text-sm">Join Our Email List</p>
+                    <p className="font-medium text-foreground text-sm">Newsletter Sign-Up</p>
                     <p className="text-xs text-muted">Stay updated on events</p>
                   </div>
                 </Link>

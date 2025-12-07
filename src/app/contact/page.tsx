@@ -139,7 +139,7 @@ export default async function ContactPage() {
               </form>
             </div>
 
-            {/* Newsletter Form */}
+            {/* Newsletter Form - Mailchimp */}
             <div className="bg-white rounded-2xl shadow-sm border border-border overflow-hidden">
               <div className="bg-primary/5 border-b border-border p-6">
                 <div className="flex items-center gap-4">
@@ -150,7 +150,7 @@ export default async function ContactPage() {
                   </div>
                   <div>
                     <h2 className="text-2xl font-bold text-foreground font-[family-name:var(--font-playfair)]">
-                      Join Our Newsletter
+                      Newsletter & Updates
                     </h2>
                     <p className="text-muted text-sm mt-1">Stay updated on PTO events and news</p>
                   </div>
@@ -158,30 +158,49 @@ export default async function ContactPage() {
               </div>
               
               <div className="p-6 lg:p-8">
-                <form className="space-y-5">
+                <form 
+                  action="https://app.us6.list-manage.com/subscribe/post?u=ed104c15e663a6829fb6ed0c0&amp;id=0f8a0b27a3&amp;f_id=0008c4e1f0" 
+                  method="post" 
+                  id="mc-embedded-subscribe-form-newsletter" 
+                  name="mc-embedded-subscribe-form" 
+                  target="_self"
+                  className="space-y-5"
+                >
+                  <div>
+                    <label htmlFor="mce-EMAIL-newsletter" className="block text-sm font-medium text-foreground mb-2">
+                      Email Address <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="mce-EMAIL-newsletter"
+                      name="EMAIL"
+                      required
+                      className="w-full px-4 py-3 rounded-lg border border-border focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
+                      placeholder="jane@example.com"
+                    />
+                  </div>
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="news-firstName" className="block text-sm font-medium text-foreground mb-2">
-                        First Name <span className="text-red-500">*</span>
+                      <label htmlFor="mce-FNAME-newsletter" className="block text-sm font-medium text-foreground mb-2">
+                        First Name
                       </label>
                       <input
                         type="text"
-                        id="news-firstName"
-                        name="firstName"
-                        required
+                        id="mce-FNAME-newsletter"
+                        name="FNAME"
                         className="w-full px-4 py-3 rounded-lg border border-border focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
                         placeholder="Jane"
                       />
                     </div>
                     <div>
-                      <label htmlFor="news-lastName" className="block text-sm font-medium text-foreground mb-2">
-                        Last Name <span className="text-red-500">*</span>
+                      <label htmlFor="mce-LNAME-newsletter" className="block text-sm font-medium text-foreground mb-2">
+                        Last Name
                       </label>
                       <input
                         type="text"
-                        id="news-lastName"
-                        name="lastName"
-                        required
+                        id="mce-LNAME-newsletter"
+                        name="LNAME"
                         className="w-full px-4 py-3 rounded-lg border border-border focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
                         placeholder="Smith"
                       />
@@ -189,42 +208,54 @@ export default async function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="news-email" className="block text-sm font-medium text-foreground mb-2">
-                      Email Address <span className="text-red-500">*</span>
+                    <label className="block text-sm font-medium text-foreground mb-3">
+                      I am a:
                     </label>
-                    <input
-                      type="email"
-                      id="news-email"
-                      name="email"
-                      required
-                      className="w-full px-4 py-3 rounded-lg border border-border focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
-                      placeholder="jane@example.com"
-                    />
+                    <div className="flex flex-wrap gap-4">
+                      <label className="flex items-center gap-2 cursor-pointer group">
+                        <input 
+                          type="radio" 
+                          name="MMERGE3" 
+                          id="mce-MMERGE30" 
+                          value="Parent"
+                          className="w-4 h-4 text-primary border-border focus:ring-primary"
+                        />
+                        <span className="text-sm text-muted group-hover:text-foreground transition-colors">Parent</span>
+                      </label>
+                      <label className="flex items-center gap-2 cursor-pointer group">
+                        <input 
+                          type="radio" 
+                          name="MMERGE3" 
+                          id="mce-MMERGE31" 
+                          value="Teacher/Staff"
+                          className="w-4 h-4 text-primary border-border focus:ring-primary"
+                        />
+                        <span className="text-sm text-muted group-hover:text-foreground transition-colors">Teacher/Staff</span>
+                      </label>
+                      <label className="flex items-center gap-2 cursor-pointer group">
+                        <input 
+                          type="radio" 
+                          name="MMERGE3" 
+                          id="mce-MMERGE32" 
+                          value="Community Member"
+                          className="w-4 h-4 text-primary border-border focus:ring-primary"
+                        />
+                        <span className="text-sm text-muted group-hover:text-foreground transition-colors">Community Member</span>
+                      </label>
+                    </div>
                   </div>
 
-                  <div>
-                    <label htmlFor="news-child-grade" className="block text-sm font-medium text-foreground mb-2">
-                      Child&apos;s Grade Level (optional)
-                    </label>
-                    <select
-                      id="news-child-grade"
-                      name="childGrade"
-                      className="w-full px-4 py-3 rounded-lg border border-border focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
-                    >
-                      <option value="">Select grade...</option>
-                      <option value="prek">Pre-K</option>
-                      <option value="k">Kindergarten</option>
-                      <option value="1">1st Grade</option>
-                      <option value="2">2nd Grade</option>
-                      <option value="3">3rd Grade</option>
-                      <option value="4">4th Grade</option>
-                      <option value="5">5th Grade</option>
-                      <option value="multiple">Multiple Grades</option>
-                    </select>
+                  {/* Hidden tags field */}
+                  <input type="hidden" name="tags" value="20993,20992" />
+
+                  {/* Honeypot field - anti-spam */}
+                  <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
+                    <input type="text" name="b_ed104c15e663a6829fb6ed0c0_0f8a0b27a3" tabIndex={-1} defaultValue="" />
                   </div>
 
                   <button
                     type="submit"
+                    name="subscribe"
                     className="w-full px-6 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors flex items-center justify-center gap-2"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

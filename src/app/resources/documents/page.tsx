@@ -49,31 +49,69 @@ export default async function DocumentsPage() {
         </div>
       </section>
 
-      {/* Sample Agenda Banner */}
-      <section className="py-6 bg-white border-b border-border">
+      {/* Meeting Structure Info */}
+      <section className="py-10 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+          <div className="bg-gray-50 rounded-2xl p-6 lg:p-8">
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+              {/* Meeting Details */}
+              <div className="flex-1">
+                <h2 className="text-xl font-bold text-foreground font-[family-name:var(--font-playfair)] mb-4">
+                  About PTO <span className="text-primary">Meetings</span>
+                </h2>
+                <p className="text-muted leading-relaxed mb-4">
+                  PTO meetings take place from <strong className="text-foreground">5:30–6:30 PM</strong> in the <strong className="text-foreground">Westfield Media Center (Library)</strong>. All parents, teachers, and staff are invited to attend.
+                </p>
+                <p className="text-muted leading-relaxed mb-4">
+                  Topics of discussion include school news, district news, upcoming events, budget updates, ad-hoc teacher funding requests, and a variety of other topics.
+                </p>
+                <p className="text-primary font-medium">
+                  Get involved, let your voice be heard, and stay on top of school happenings!
+                </p>
               </div>
-              <p className="text-foreground font-medium">
-                Wondering what happens at a PTO Meeting?
-              </p>
+              
+              {/* Quick Info Cards */}
+              <div className="lg:w-64 space-y-3">
+                <div className="bg-white rounded-xl p-4 border border-border">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted">Time</p>
+                      <p className="font-semibold text-foreground">5:30–6:30 PM</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-white rounded-xl p-4 border border-border">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted">Location</p>
+                      <p className="font-semibold text-foreground">Media Center</p>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  href="https://docs.google.com/document/d/1bleXmxN74wWN6Wf_XglGVQS0kM9emJvA0uECtgB7C74/edit"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-primary text-white font-medium rounded-xl hover:bg-primary-dark transition-colors text-sm"
+                >
+                  View Sample Agenda
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
             </div>
-            <a
-              href="https://docs.google.com/document/d/1bleXmxN74wWN6Wf_XglGVQS0kM9emJvA0uECtgB7C74/edit"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-colors text-sm whitespace-nowrap"
-            >
-              View Sample Agenda
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
           </div>
         </div>
       </section>

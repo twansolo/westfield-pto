@@ -115,7 +115,9 @@ export function Footer() {
               </p>
               <div className="flex gap-4 mt-4">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/p/Westfield-PTO-100064283547071/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label="Facebook"
                 >
@@ -132,10 +134,27 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-500">
-              © {new Date().getFullYear()} Linn-Mar Westfield Elementary PTO. All rights reserved.
+              © {new Date().getFullYear()}{" "}
+              <a 
+                href="https://www.linnmar.k12.ia.us/school/westfield/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                Linn-Mar Westfield Elementary
+              </a>{" "}
+              PTO. All rights reserved.
             </p>
             <p className="text-sm text-gray-500">
-              Part of the <span className="text-primary font-semibold">Linn-Mar</span> Community School District
+              Part of the{" "}
+              <a 
+                href="https://www.linnmar.k12.ia.us/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary font-semibold hover:text-primary-light transition-colors"
+              >
+                Linn-Mar Community School District
+              </a>
             </p>
           </div>
         </div>

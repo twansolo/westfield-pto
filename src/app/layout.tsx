@@ -48,14 +48,6 @@ export default function RootLayout({
             `,
           }}
         />
-        {/* Mailchimp */}
-        <Script
-          id="mcjs"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/ed104c15e663a6829fb6ed0c0/f0e9ec84c00093fa4332c4f86.js");`,
-          }}
-        />
       </head>
       <body
         className={`${playfair.variable} ${sourceSans.variable} antialiased font-[family-name:var(--font-source-sans)]`}
@@ -63,6 +55,12 @@ export default function RootLayout({
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
+        {/* Mailchimp - placed before closing body tag */}
+        <Script
+          id="mcjs"
+          strategy="beforeInteractive"
+          src="https://chimpstatic.com/mcjs-connected/js/users/ed104c15e663a6829fb6ed0c0/f0e9ec84c00093fa4332c4f86.js"
+        />
       </body>
     </html>
   );

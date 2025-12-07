@@ -162,3 +162,17 @@ export const fundraisersQuery = groq`
   }
 `
 
+// Downloadable Forms
+export const ptoFormsQuery = groq`
+  *[_type == "ptoForm" && isActive == true] | order(category asc, sortOrder asc) {
+    _id,
+    name,
+    description,
+    category,
+    "fileUrl": file.asset->url,
+    fileSize,
+    fileType,
+    sortOrder
+  }
+`
+

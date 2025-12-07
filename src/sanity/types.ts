@@ -73,3 +73,14 @@ export interface Fundraiser {
   sortOrder: number
 }
 
+export interface PtoForm {
+  _id: string
+  name: string
+  description: string
+  category: 'pto' | 'aaa' | 'other'
+  fileUrl: string
+  fileSize?: string
+  fileType?: string
+  sortOrder: number
+}
+

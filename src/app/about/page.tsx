@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { client, boardMembersQuery, committeeChairsQuery } from "@/sanity";
+import Link from "next/link";
+import { client, boardMembersQuery } from "@/sanity";
 import { urlFor } from "@/sanity";
-import type { BoardMember, CommitteeChair } from "@/sanity";
+import type { BoardMember } from "@/sanity";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,16 +12,12 @@ export const metadata: Metadata = {
 
 export const revalidate = 60;
 
-async function getData() {
-  const [boardMembers, committeeChairs] = await Promise.all([
-    client.fetch<BoardMember[]>(boardMembersQuery),
-    client.fetch<CommitteeChair[]>(committeeChairsQuery),
-  ]);
-  return { boardMembers, committeeChairs };
+async function getBoardMembers() {
+  return client.fetch<BoardMember[]>(boardMembersQuery);
 }
 
 export default async function AboutPage() {
-  const { boardMembers, committeeChairs } = await getData();
+  const boardMembers = await getBoardMembers();
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -28,7 +25,7 @@ export default async function AboutPage() {
       <section className="bg-primary text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold font-[family-name:var(--font-playfair)]">
-            Chairs & Officers
+            Board & Officers
           </h1>
           <p className="mt-4 text-lg text-white/80 max-w-2xl mx-auto">
             Meet the dedicated volunteers who lead our PTO and work tirelessly to support our school community.
@@ -39,9 +36,6 @@ export default async function AboutPage() {
       {/* Board Members Grid */}
       <section className="py-12 lg:py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl lg:text-3xl font-bold text-foreground font-[family-name:var(--font-playfair)] mb-8 text-center">
-            PTO <span className="text-primary">Board</span>
-          </h2>
           {boardMembers && boardMembers.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {boardMembers.map((member) => (
@@ -56,36 +50,26 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      {/* Committee Chairs */}
+      {/* Committee Chairs Link */}
       <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl lg:text-3xl font-bold text-foreground font-[family-name:var(--font-playfair)] mb-8 text-center">
-            Committee <span className="text-primary">Chairs</span>
-          </h2>
-          
-          {committeeChairs && committeeChairs.length > 0 ? (
-            <div className="bg-gray-50 rounded-2xl border border-border overflow-hidden">
-              <div className="divide-y divide-border">
-                {committeeChairs.map((chair) => (
-                  <div key={chair._id} className="p-4 hover:bg-gray-100 transition-colors">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                      <div className="flex-1">
-                        <h3 className="font-semibold text-foreground">{chair.committeeName}</h3>
-                        {chair.note && (
-                          <p className="text-xs text-muted mt-0.5">({chair.note})</p>
-                        )}
-                      </div>
-                      <p className="text-primary font-medium">{chair.chairs}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div className="bg-gray-50 rounded-xl p-8 text-center border border-border">
-              <p className="text-muted">Committee chair information coming soon.</p>
-            </div>
-          )}
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center">
+            <h2 className="text-2xl font-bold text-foreground font-[family-name:var(--font-playfair)]">
+              Looking for Committee Chairs?
+            </h2>
+            <p className="mt-3 text-muted max-w-xl mx-auto">
+              View the complete list of committee chairs who organize our events and activities throughout the school year.
+            </p>
+            <Link
+              href="/about/committees"
+              className="inline-flex items-center justify-center gap-2 mt-6 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors"
+            >
+              View Committee Chairs
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </section>
 

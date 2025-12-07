@@ -193,3 +193,19 @@ export const budgetDocumentsQuery = groq`
   }
 `
 
+// Resource Links
+export const resourceLinksQuery = groq`
+  *[_type == "resourceLink" && isActive == true] | order(category asc, sortOrder asc) {
+    _id,
+    name,
+    description,
+    category,
+    url,
+    isInternal,
+    icon,
+    isHighlighted,
+    accountNumber,
+    sortOrder
+  }
+`
+

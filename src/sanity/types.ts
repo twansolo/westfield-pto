@@ -103,3 +103,16 @@ export interface BudgetDocument {
   sortOrder: number
 }
 
+export interface ResourceLink {
+  _id: string
+  name: string
+  description: string
+  category: 'quick' | 'school' | 'educational'
+  url: string
+  isInternal?: boolean
+  icon?: string
+  isHighlighted?: boolean
+  accountNumber?: string
+  sortOrder: number
+}
+

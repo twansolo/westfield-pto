@@ -61,3 +61,15 @@ export interface CommitteeChair {
   sortOrder: number
 }
 
+export interface Fundraiser {
+  _id: string
+  name: string
+  icon: string
+  highlight?: string
+  description: string
+  extraInfo?: string
+  link?: string
+  linkText?: string
+  sortOrder: number
+}
+

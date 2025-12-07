@@ -147,3 +147,18 @@ export const committeeChairsQuery = groq`
   }
 `
 
+// Consumer Fundraisers
+export const fundraisersQuery = groq`
+  *[_type == "fundraiser" && isActive == true] | order(sortOrder asc) {
+    _id,
+    name,
+    icon,
+    highlight,
+    description,
+    extraInfo,
+    link,
+    linkText,
+    sortOrder
+  }
+`
+

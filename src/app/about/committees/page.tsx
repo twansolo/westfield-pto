@@ -3,8 +3,8 @@ import type { CommitteeChair } from "@/sanity";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Committee Chairs | Westfield PTO",
-  description: "Meet the committee chairs who organize events and activities for the Westfield PTO.",
+  title: "About Committees",
+  description: "Explore Westfield Elementary PTO committees and volunteer opportunities. Find ways to contribute to our school community.",
 };
 
 export const revalidate = 60;

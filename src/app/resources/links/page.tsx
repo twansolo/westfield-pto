@@ -4,8 +4,8 @@ import type { ResourceLink } from "@/sanity";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Useful Links | Westfield PTO",
-  description: "Helpful links for Westfield families including educational resources, school supplies, and more.",
+  title: "Useful Links for Parents",
+  description: "Helpful resources for Westfield Elementary families including educational links, school supplies, and community programs.",
 };
 
 export const revalidate = 60;

@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Newsletter Sign-Up | Westfield PTO",
-  description: "Subscribe to the Westfield PTO newsletter to stay updated on events, news, and announcements.",
+  title: "Newsletter Sign-Up",
+  description: "Subscribe to the Westfield Elementary PTO newsletter for updates on events, volunteer opportunities, and school news.",
 };
 
 export default function NewsletterPage() {

@@ -6,8 +6,8 @@ import type { BoardMember } from "@/sanity";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Board & Officers | Westfield PTO",
-  description: "Meet the dedicated volunteers who lead the Westfield PTO.",
+  title: "Board & Officers",
+  description: "Meet the dedicated parent volunteers who lead Westfield Elementary PTO. Learn about our officers and how to get involved.",
 };
 
 export const revalidate = 60;

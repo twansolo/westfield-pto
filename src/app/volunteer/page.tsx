@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Volunteer | Westfield PTO",
-  description: "Sign up to volunteer with the Westfield PTO. We have many opportunities to get involved!",
+  title: "Volunteer Opportunities",
+  description: "Volunteer with Westfield Elementary PTO! Discover ways to help in classrooms, at events, and support our school community.",
 };
 
 const volunteerAreas = [

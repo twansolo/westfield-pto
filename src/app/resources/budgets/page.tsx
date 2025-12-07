@@ -3,8 +3,8 @@ import type { SiteSettings, BudgetDocument } from "@/sanity";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Budgets & PTO Purchases | Westfield PTO",
-  description: "View PTO budgets and purchase information.",
+  title: "Budgets & PTO Purchases",
+  description: "View Westfield Elementary PTO annual budgets, spending reports, and recent purchases supporting our school community.",
 };
 
 export const revalidate = 60;

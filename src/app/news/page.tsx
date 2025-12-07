@@ -4,8 +4,8 @@ import type { Announcement } from "@/sanity";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "News & Announcements | Westfield PTO",
-  description: "Stay up to date with the latest news and announcements from the Westfield PTO.",
+  title: "News & Announcements",
+  description: "Latest news, updates, and announcements from Westfield Elementary PTO. Stay informed about what's happening at our school.",
 };
 
 export const revalidate = 60;

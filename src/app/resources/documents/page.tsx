@@ -3,8 +3,8 @@ import type { MeetingMinutes } from "@/sanity";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PTO Meeting Minutes | Westfield PTO",
-  description: "Access PTO meeting minutes organized by school year.",
+  title: "Meeting Minutes",
+  description: "Download Westfield Elementary PTO meeting minutes organized by school year. Review past discussions and decisions.",
 };
 
 export const revalidate = 60;

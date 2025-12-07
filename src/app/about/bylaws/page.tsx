@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Bylaws & Standing Rules | Westfield PTO",
-  description: "View the official bylaws and standing rules of the Westfield Parent Teacher Organization.",
+  title: "Bylaws & Standing Rules",
+  description: "Official bylaws and standing rules of Westfield Elementary PTO. Review our organization's governance and operating procedures.",
 };
 
 export default function BylawsPage() {

@@ -4,8 +4,8 @@ import type { PtoForm } from "@/sanity";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Forms | Westfield PTO",
-  description: "Download important forms for Westfield staff and parents, including reimbursement and payment request forms.",
+  title: "Downloadable Forms",
+  description: "Download Westfield Elementary PTO forms including reimbursement requests, payment forms, and other important documents.",
 };
 
 export const revalidate = 60;

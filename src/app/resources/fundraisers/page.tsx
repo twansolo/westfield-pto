@@ -3,8 +3,8 @@ import type { Fundraiser } from "@/sanity";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Consumer Fundraisers | Westfield PTO",
-  description: "Support Westfield PTO through everyday purchases with Box Tops, Hy-Vee, Amazon Smile, and more.",
+  title: "Consumer Fundraisers",
+  description: "Support Westfield Elementary PTO through everyday purchases. Earn money for our school with Box Tops, Hy-Vee receipts, and more.",
 };
 
 export const revalidate = 60;

@@ -4,8 +4,8 @@ import type { Event } from "@/sanity";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Events | Westfield PTO",
-  description: "View upcoming events and activities organized by the Westfield PTO.",
+  title: "Events & Calendar",
+  description: "View upcoming Westfield Elementary PTO events, meetings, and activities. Stay connected with our school community calendar.",
 };
 
 export const revalidate = 60;

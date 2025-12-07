@@ -18,9 +18,20 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Linn-Mar Westfield Elementary PTO | Building Tomorrow's Leaders Today",
+  title: {
+    default: "Westfield Elementary PTO | Building Tomorrow's Leaders Today",
+    template: "%s | Westfield Elementary PTO",
+  },
   description:
-    "The Westfield Elementary PTO partners with families and educators to create exceptional learning experiences that inspire, challenge, and prepare our children for a bright future.",
+    "Westfield Elementary PTO in Robins, Iowa partners with families and educators to support students through events, fundraisers, and community building.",
+  keywords: ["Westfield Elementary", "PTO", "Robins Iowa", "Linn-Mar", "parent teacher organization", "school volunteer"],
+  openGraph: {
+    title: "Westfield Elementary PTO",
+    description: "Supporting Westfield Elementary students and families in Robins, Iowa.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Westfield Elementary PTO",
+  },
 };
 
 export default function RootLayout({

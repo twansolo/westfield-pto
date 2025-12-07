@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Resources | Westfield PTO",
-  description: "Access documents, forms, budgets, and useful links from the Westfield PTO.",
+  title: "PTO Resources & Documents",
+  description: "Access Westfield Elementary PTO resources including meeting minutes, forms, budgets, and helpful links for parents.",
 };
 
 const resources = [

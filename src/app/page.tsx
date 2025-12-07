@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { client } from "@/sanity";
 import {
   siteSettingsQuery,
@@ -25,12 +26,14 @@ export default async function HomePage() {
     <>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1920&q=80")`,
-          }}
+        {/* Background Image - optimized for LCP */}
+        <Image
+          src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1920&q=80"
+          alt="Children learning in classroom"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
         />
         {/* Overlay for readability */}
         <div className="absolute inset-0 bg-white/85" />

@@ -1,5 +1,10 @@
 import type { PortableTextBlock, Image } from 'sanity'
 
+export interface RecentPurchase {
+  description: string
+  amount?: number
+}
+
 export interface SiteSettings {
   schoolName: string
   logo?: Image
@@ -12,6 +17,10 @@ export interface SiteSettings {
   googleCalendarUrl?: string
   facebookPageUrl?: string
   contactEmail?: string
+  budgetYear?: string
+  totalBudget?: number
+  spentToDate?: number
+  recentPurchases?: RecentPurchase[]
 }
 
 export interface Event {
@@ -81,6 +90,16 @@ export interface PtoForm {
   fileUrl: string
   fileSize?: string
   fileType?: string
+  sortOrder: number
+}
+
+export interface BudgetDocument {
+  _id: string
+  title: string
+  schoolYear: string
+  documentType: 'approved' | 'yearend' | 'midyear' | 'other'
+  fileUrl: string
+  fileSize?: string
   sortOrder: number
 }
 

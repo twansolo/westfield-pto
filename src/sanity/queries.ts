@@ -13,7 +13,11 @@ export const siteSettingsQuery = groq`
     schoolWebsiteUrl,
     googleCalendarUrl,
     facebookPageUrl,
-    contactEmail
+    contactEmail,
+    budgetYear,
+    totalBudget,
+    spentToDate,
+    recentPurchases
   }
 `
 
@@ -172,6 +176,19 @@ export const ptoFormsQuery = groq`
     "fileUrl": file.asset->url,
     fileSize,
     fileType,
+    sortOrder
+  }
+`
+
+// Budget Documents
+export const budgetDocumentsQuery = groq`
+  *[_type == "budgetDocument" && isActive == true] | order(sortOrder asc) {
+    _id,
+    title,
+    schoolYear,
+    documentType,
+    "fileUrl": file.asset->url,
+    fileSize,
     sortOrder
   }
 `

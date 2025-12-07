@@ -21,6 +21,11 @@ export interface SiteSettings {
   totalBudget?: number
   spentToDate?: number
   recentPurchases?: RecentPurchase[]
+  showFundraiser?: boolean
+  fundraiserName?: string
+  fundraiserGoal?: number
+  fundraiserRaised?: number
+  fundraiserLink?: string
 }
 
 export interface Event {

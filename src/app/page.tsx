@@ -94,6 +94,16 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Fundraiser Thermometer */}
+      {settings?.showFundraiser && settings?.fundraiserGoal && settings?.fundraiserGoal > 0 && (
+        <FundraiserThermometer
+          name={settings.fundraiserName || "Annual Fundraiser"}
+          raised={settings.fundraiserRaised || 0}
+          goal={settings.fundraiserGoal}
+          link={settings.fundraiserLink}
+        />
+      )}
+
       {/* Our Purpose Section */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -450,5 +460,105 @@ function AnnouncementCard({ announcement }: { announcement: Announcement }) {
         </svg>
       </div>
     </Link>
+  );
+}
+
+function FundraiserThermometer({
+  name,
+  raised,
+  goal,
+  link,
+}: {
+  name: string;
+  raised: number;
+  goal: number;
+  link?: string;
+}) {
+  const percentage = Math.min((raised / goal) * 100, 100);
+  const formatCurrency = (amount: number) =>
+    new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    }).format(amount);
+
+  return (
+    <section className="py-10 bg-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 rounded-2xl p-6 lg:p-8">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-6">
+            {/* Info */}
+            <div className="flex-1">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-foreground font-[family-name:var(--font-playfair)]">
+                    {name}
+                  </h3>
+                  <p className="text-sm text-muted">Help us reach our goal!</p>
+                </div>
+              </div>
+
+              {/* Progress Bar */}
+              <div className="mt-4">
+                <div className="flex justify-between items-end mb-2">
+                  <div>
+                    <span className="text-3xl font-bold text-primary">{formatCurrency(raised)}</span>
+                    <span className="text-muted ml-2">raised</span>
+                  </div>
+                  <div className="text-right">
+                    <span className="text-lg font-semibold text-foreground">{formatCurrency(goal)}</span>
+                    <span className="text-muted ml-1">goal</span>
+                  </div>
+                </div>
+                
+                {/* Thermometer Bar */}
+                <div className="relative h-6 bg-gray-200 rounded-full overflow-hidden">
+                  <div
+                    className="absolute inset-y-0 left-0 bg-gradient-to-r from-primary to-green-500 rounded-full transition-all duration-1000 ease-out"
+                    style={{ width: `${percentage}%` }}
+                  />
+                  {/* Percentage indicator */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-xs font-bold text-white drop-shadow-md">
+                      {Math.round(percentage)}%
+                    </span>
+                  </div>
+                </div>
+
+                {/* Milestone markers */}
+                <div className="flex justify-between mt-1 text-xs text-muted">
+                  <span>$0</span>
+                  <span>{formatCurrency(goal / 2)}</span>
+                  <span>{formatCurrency(goal)}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA */}
+            {link && (
+              <div className="lg:ml-6">
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 w-full lg:w-auto px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary-dark transition-colors shadow-lg hover:shadow-xl"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                  Donate Now
+                </a>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

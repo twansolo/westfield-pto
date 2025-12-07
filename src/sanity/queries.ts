@@ -17,7 +17,12 @@ export const siteSettingsQuery = groq`
     budgetYear,
     totalBudget,
     spentToDate,
-    recentPurchases
+    recentPurchases,
+    showFundraiser,
+    fundraiserName,
+    fundraiserGoal,
+    fundraiserRaised,
+    fundraiserLink
   }
 `
 

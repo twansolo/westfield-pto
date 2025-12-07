@@ -310,7 +310,7 @@ export default async function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Email */}
             <a
-              href={`mailto:${settings?.contactEmail || "pto@westfieldschool.org"}`}
+              href={`mailto:${settings?.contactEmail || "westfieldpto@gmail.com"}`}
               className="flex items-center gap-4 p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors group"
             >
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
@@ -320,7 +320,7 @@ export default async function ContactPage() {
               </div>
               <div>
                 <h3 className="font-semibold text-foreground">Email Us</h3>
-                <p className="text-sm text-primary">{settings?.contactEmail || "pto@westfieldschool.org"}</p>
+                <p className="text-sm text-primary">{settings?.contactEmail || "westfieldpto@gmail.com"}</p>
               </div>
             </a>
 

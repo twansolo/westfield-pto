@@ -35,6 +35,54 @@ export default async function EventsPage() {
         </div>
       </section>
 
+      {/* Google Calendar Embed */}
+      <section className="py-12 lg:py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl lg:text-3xl font-bold text-foreground font-[family-name:var(--font-playfair)]">
+              PTO <span className="text-primary">Calendar</span>
+            </h2>
+            <p className="mt-2 text-muted">
+              View all PTO events on our Google Calendar
+            </p>
+          </div>
+          
+          <div className="bg-gray-50 rounded-2xl p-4 border border-border overflow-hidden">
+            <iframe
+              src="https://calendar.google.com/calendar/embed?src=westfieldpto%40gmail.com&ctz=America%2FChicago&showTitle=0&showNav=1&showPrint=0&showTabs=1&showCalendars=0&showTz=0"
+              style={{ border: 0 }}
+              width="100%"
+              height="600"
+              className="rounded-xl"
+              title="Westfield PTO Google Calendar"
+            />
+          </div>
+
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm">
+            <a
+              href="https://calendar.google.com/calendar/u/0?cid=d2VzdGZpZWxkcHRvQGdtYWlsLmNvbQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
+            >
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/>
+              </svg>
+              Add to Google Calendar
+            </a>
+            <a
+              href="https://calendar.google.com/calendar/ical/westfieldpto%40gmail.com/public/basic.ics"
+              className="inline-flex items-center gap-2 px-4 py-2 border border-border text-foreground rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Download iCal (.ics)
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Upcoming Events */}
       <section className="py-12 lg:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,7 +99,7 @@ export default async function EventsPage() {
           ) : (
             <div className="bg-white rounded-xl p-8 text-center border border-border">
               <p className="text-muted">No upcoming events at the moment.</p>
-              <p className="text-sm text-muted mt-2">Check back soon for new events!</p>
+              <p className="text-sm text-muted mt-2">Check the calendar above or check back soon for new events!</p>
             </div>
           )}
         </div>
@@ -148,4 +196,3 @@ function EventCard({ event, isPast = false }: { event: Event; isPast?: boolean }
     </Link>
   );
 }
-

@@ -107,10 +107,10 @@ export function Footer() {
             <div className="space-y-3 text-sm text-gray-400">
               <p>
                 <a
-                  href="mailto:pto@westfieldschool.org"
+                  href="mailto:westfieldpto@gmail.com"
                   className="hover:text-white transition-colors"
                 >
-                  pto@westfieldschool.org
+                  westfieldpto@gmail.com
                 </a>
               </p>
               <div className="flex gap-4 mt-4">

@@ -144,7 +144,9 @@ export default async function HomePage() {
                   Please consider donating to Westfield PTO. We couldn&apos;t support our school without your generous contributions.
                 </p>
                 <a
-                  href="#"
+                  href="https://linnmarfoundation.networkforgood.com/projects/256751-write-one-for-westfield-2025-26"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white font-medium rounded-lg hover:bg-primary-dark transition-colors text-sm"
                 >
                   Donate Now

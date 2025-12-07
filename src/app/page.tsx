@@ -77,6 +77,19 @@ export default async function HomePage() {
               Learn More
             </Link>
           </div>
+          
+          {/* New families link */}
+          <div className="mt-6">
+            <Link
+              href="/start-here"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-medium transition-colors"
+            >
+              New to Westfield? Start here
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
         </div>
 
         {/* Decorative bottom wave */}

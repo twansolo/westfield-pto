@@ -21,6 +21,22 @@ export default async function AboutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* New Families Banner */}
+      <div className="bg-primary/10 border-b border-primary/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <Link 
+            href="/start-here" 
+            className="flex items-center justify-center gap-2 text-sm text-primary hover:text-primary-dark font-medium transition-colors"
+          >
+            <span>👋</span>
+            New to Westfield? Start here for everything you need to know
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+        </div>
+      </div>
+
       {/* Header */}
       <section className="bg-primary text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

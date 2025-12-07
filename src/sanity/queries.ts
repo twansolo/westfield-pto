@@ -113,3 +113,26 @@ export const boardMembersQuery = groq`
   }
 `
 
+// Meeting Minutes
+export const meetingMinutesQuery = groq`
+  *[_type == "meetingMinutes"] | order(meetingDate desc) {
+    _id,
+    title,
+    schoolYear,
+    meetingDate,
+    "fileUrl": file.asset->url,
+    fileSize
+  }
+`
+
+export const meetingMinutesByYearQuery = groq`
+  *[_type == "meetingMinutes" && schoolYear == $schoolYear] | order(meetingDate desc) {
+    _id,
+    title,
+    schoolYear,
+    meetingDate,
+    "fileUrl": file.asset->url,
+    fileSize
+  }
+`
+

@@ -44,3 +44,12 @@ export interface BoardMember {
   sortOrder: number
 }
 
+export interface MeetingMinutes {
+  _id: string
+  title: string
+  schoolYear: string
+  meetingDate: string
+  fileUrl: string
+  fileSize?: string
+}
+

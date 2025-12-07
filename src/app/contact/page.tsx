@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Westfield PTO",
-  description: "Get in touch with the Westfield PTO. Send us a message or sign up for our newsletter!",
+  title: "Get Involved | Westfield PTO",
+  description: "Volunteer with the Westfield PTO or sign up for our newsletter to stay updated on events and news!",
 };
 
 export const revalidate = 60;
@@ -23,10 +23,10 @@ export default async function ContactPage() {
       <section className="bg-primary text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold font-[family-name:var(--font-playfair)]">
-            Contact Us
+            Get Involved
           </h1>
           <p className="mt-4 text-lg text-white/80 max-w-2xl mx-auto">
-            Have a question or want to get involved? We&apos;d love to hear from you!
+            Join our community! Volunteer to help or subscribe to stay updated on PTO events and news.
           </p>
         </div>
       </section>
@@ -36,52 +36,52 @@ export default async function ContactPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             
-            {/* Contact Form - Mailchimp */}
+            {/* Volunteer Interest Form - Mailchimp */}
             <div className="bg-white rounded-2xl shadow-sm border border-border overflow-hidden">
               <div className="bg-primary/5 border-b border-border p-6">
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <svg className="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                   </div>
                   <div>
                     <h2 className="text-2xl font-bold text-foreground font-[family-name:var(--font-playfair)]">
-                      Contact the PTO
+                      Volunteer Interest
                     </h2>
-                    <p className="text-muted text-sm mt-1">Send us a message and we&apos;ll get back to you</p>
+                    <p className="text-muted text-sm mt-1">Help make a difference in our school community</p>
                   </div>
                 </div>
               </div>
               
               <form 
-                action="https://app.us6.list-manage.com/subscribe/post?u=ed104c15e663a6829fb6ed0c0&amp;id=0f8a0b27a3&amp;f_id=000fc4e1f0" 
+                action="https://app.us6.list-manage.com/subscribe/post?u=ed104c15e663a6829fb6ed0c0&amp;id=0f8a0b27a3&amp;f_id=0009c4e1f0" 
                 method="post" 
-                id="mc-embedded-subscribe-form" 
+                id="mc-embedded-subscribe-form-volunteer" 
                 name="mc-embedded-subscribe-form" 
                 target="_self"
                 className="p-6 lg:p-8 space-y-5"
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="mce-FNAME" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="mce-FNAME-vol" className="block text-sm font-medium text-foreground mb-2">
                       First Name
                     </label>
                     <input
                       type="text"
-                      id="mce-FNAME"
+                      id="mce-FNAME-vol"
                       name="FNAME"
                       className="w-full px-4 py-3 rounded-lg border border-border focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
                       placeholder="Jane"
                     />
                   </div>
                   <div>
-                    <label htmlFor="mce-LNAME" className="block text-sm font-medium text-foreground mb-2">
+                    <label htmlFor="mce-LNAME-vol" className="block text-sm font-medium text-foreground mb-2">
                       Last Name
                     </label>
                     <input
                       type="text"
-                      id="mce-LNAME"
+                      id="mce-LNAME-vol"
                       name="LNAME"
                       className="w-full px-4 py-3 rounded-lg border border-border focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
                       placeholder="Smith"
@@ -90,12 +90,12 @@ export default async function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="mce-EMAIL" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="mce-EMAIL-vol" className="block text-sm font-medium text-foreground mb-2">
                     Email Address <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
-                    id="mce-EMAIL"
+                    id="mce-EMAIL-vol"
                     name="EMAIL"
                     required
                     className="w-full px-4 py-3 rounded-lg border border-border focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
@@ -104,18 +104,50 @@ export default async function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="mce-MSG" className="block text-sm font-medium text-foreground mb-2">
-                    Message <span className="text-red-500">*</span>
+                  <label htmlFor="mce-MGRADE" className="block text-sm font-medium text-foreground mb-2">
+                    Student&apos;s Grade(s)
                   </label>
-                  <textarea
-                    id="mce-MSG"
-                    name="MSG"
-                    required
-                    rows={4}
-                    className="w-full px-4 py-3 rounded-lg border border-border focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors resize-none"
-                    placeholder="How can we help you? Questions, volunteer interest, suggestions..."
+                  <input
+                    type="text"
+                    id="mce-MGRADE"
+                    name="MGRADE"
+                    className="w-full px-4 py-3 rounded-lg border border-border focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors"
+                    placeholder="e.g., 2nd, K & 3rd"
                   />
                 </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-3">
+                    Volunteer Interests
+                  </label>
+                  <div className="grid grid-cols-2 gap-3">
+                    {[
+                      { id: "mce-MMERGE60", value: "Events", label: "Events" },
+                      { id: "mce-MMERGE61", value: "Book Fair", label: "Book Fair" },
+                      { id: "mce-MMERGE62", value: "Field Day", label: "Field Day" },
+                      { id: "mce-MMERGE63", value: "Classroom", label: "Classroom" },
+                      { id: "mce-MMERGE64", value: "Teacher Appreciation", label: "Teacher Appreciation" },
+                      { id: "mce-MMERGE65", value: "Wherever needed", label: "Wherever needed" },
+                    ].map((option) => (
+                      <label 
+                        key={option.id} 
+                        className="flex items-center gap-2 cursor-pointer group p-2 rounded-lg hover:bg-gray-50 transition-colors"
+                      >
+                        <input 
+                          type="radio" 
+                          name="MMERGE6" 
+                          id={option.id} 
+                          value={option.value}
+                          className="w-4 h-4 text-primary border-border focus:ring-primary"
+                        />
+                        <span className="text-sm text-muted group-hover:text-foreground transition-colors">{option.label}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Hidden tags field */}
+                <input type="hidden" name="tags" value="20996" />
 
                 {/* Honeypot field - anti-spam */}
                 <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
@@ -128,13 +160,13 @@ export default async function ContactPage() {
                   className="w-full px-6 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors flex items-center justify-center gap-2"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
                   </svg>
-                  Send Message
+                  Sign Up to Volunteer
                 </button>
 
                 <p className="text-xs text-muted text-center">
-                  We typically respond within 1-2 business days.
+                  We&apos;ll reach out with volunteer opportunities matching your interests!
                 </p>
               </form>
             </div>

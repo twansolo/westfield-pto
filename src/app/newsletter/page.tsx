@@ -4,6 +4,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Newsletter Sign-Up",
   description: "Subscribe to the Westfield Elementary PTO newsletter for updates on events, volunteer opportunities, and school news.",
+  openGraph: {
+    title: "Newsletter Sign-Up | Westfield Elementary PTO",
+    description: "Subscribe to the Westfield Elementary PTO newsletter for updates on events, volunteer opportunities, and school news.",
+  },
+  twitter: {
+    title: "Newsletter Sign-Up | Westfield Elementary PTO",
+    description: "Subscribe to the Westfield Elementary PTO newsletter for updates on events, volunteer opportunities, and school news.",
+  },
 };
 
 export default function NewsletterPage() {

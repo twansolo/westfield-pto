@@ -8,6 +8,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Board & Officers",
   description: "Meet the dedicated parent volunteers who lead Westfield Elementary PTO. Learn about our officers and how to get involved.",
+  openGraph: {
+    title: "Board & Officers | Westfield Elementary PTO",
+    description: "Meet the dedicated parent volunteers who lead Westfield Elementary PTO. Learn about our officers and how to get involved.",
+  },
+  twitter: {
+    title: "Board & Officers | Westfield Elementary PTO",
+    description: "Meet the dedicated parent volunteers who lead Westfield Elementary PTO. Learn about our officers and how to get involved.",
+  },
 };
 
 export const revalidate = 60;

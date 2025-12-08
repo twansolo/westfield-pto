@@ -23,9 +23,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: "Announcement Not Found | Westfield PTO" };
   }
 
+  const description = `News and announcement: ${announcement.title}`;
+
   return {
     title: `${announcement.title} | Westfield PTO`,
-    description: `News and announcement: ${announcement.title}`,
+    description,
+    openGraph: {
+      title: `${announcement.title} | Westfield Elementary PTO`,
+      description,
+    },
+    twitter: {
+      title: `${announcement.title} | Westfield Elementary PTO`,
+      description,
+    },
   };
 }
 

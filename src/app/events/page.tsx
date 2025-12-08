@@ -6,6 +6,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Events & Calendar",
   description: "View upcoming Westfield Elementary PTO events, meetings, and activities. Stay connected with our school community calendar.",
+  openGraph: {
+    title: "Events & Calendar | Westfield Elementary PTO",
+    description: "View upcoming Westfield Elementary PTO events, meetings, and activities. Stay connected with our school community calendar.",
+  },
+  twitter: {
+    title: "Events & Calendar | Westfield Elementary PTO",
+    description: "View upcoming Westfield Elementary PTO events, meetings, and activities. Stay connected with our school community calendar.",
+  },
 };
 
 export const revalidate = 60;

@@ -6,6 +6,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Get Involved & Contact Us",
   description: "Contact Westfield Elementary PTO or sign up to volunteer. Join our community and help support students and teachers.",
+  openGraph: {
+    title: "Get Involved & Contact Us | Westfield Elementary PTO",
+    description: "Contact Westfield Elementary PTO or sign up to volunteer. Join our community and help support students and teachers.",
+  },
+  twitter: {
+    title: "Get Involved & Contact Us | Westfield Elementary PTO",
+    description: "Contact Westfield Elementary PTO or sign up to volunteer. Join our community and help support students and teachers.",
+  },
 };
 
 export const revalidate = 60;

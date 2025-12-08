@@ -6,6 +6,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "News & Announcements",
   description: "Latest news, updates, and announcements from Westfield Elementary PTO. Stay informed about what's happening at our school.",
+  openGraph: {
+    title: "News & Announcements | Westfield Elementary PTO",
+    description: "Latest news, updates, and announcements from Westfield Elementary PTO. Stay informed about what's happening at our school.",
+  },
+  twitter: {
+    title: "News & Announcements | Westfield Elementary PTO",
+    description: "Latest news, updates, and announcements from Westfield Elementary PTO. Stay informed about what's happening at our school.",
+  },
 };
 
 export const revalidate = 60;

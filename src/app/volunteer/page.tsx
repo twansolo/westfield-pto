@@ -4,6 +4,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Volunteer Opportunities",
   description: "Volunteer with Westfield Elementary PTO! Discover ways to help in classrooms, at events, and support our school community.",
+  openGraph: {
+    title: "Volunteer Opportunities | Westfield Elementary PTO",
+    description: "Volunteer with Westfield Elementary PTO! Discover ways to help in classrooms, at events, and support our school community.",
+  },
+  twitter: {
+    title: "Volunteer Opportunities | Westfield Elementary PTO",
+    description: "Volunteer with Westfield Elementary PTO! Discover ways to help in classrooms, at events, and support our school community.",
+  },
 };
 
 const volunteerAreas = [

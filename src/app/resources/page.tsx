@@ -4,6 +4,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "PTO Resources & Documents",
   description: "Access Westfield Elementary PTO resources including meeting minutes, forms, budgets, and helpful links for parents.",
+  openGraph: {
+    title: "PTO Resources & Documents | Westfield Elementary PTO",
+    description: "Access Westfield Elementary PTO resources including meeting minutes, forms, budgets, and helpful links for parents.",
+  },
+  twitter: {
+    title: "PTO Resources & Documents | Westfield Elementary PTO",
+    description: "Access Westfield Elementary PTO resources including meeting minutes, forms, budgets, and helpful links for parents.",
+  },
 };
 
 const resources = [

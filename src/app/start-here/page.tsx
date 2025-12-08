@@ -4,6 +4,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Start Here for New Families",
   description: "New to Westfield Elementary? Start here! Learn how to join the PTO, volunteer, donate, and stay connected with our school community.",
+  openGraph: {
+    title: "Start Here for New Families | Westfield Elementary PTO",
+    description: "New to Westfield Elementary? Start here! Learn how to join the PTO, volunteer, donate, and stay connected with our school community.",
+  },
+  twitter: {
+    title: "Start Here for New Families | Westfield Elementary PTO",
+    description: "New to Westfield Elementary? Start here! Learn how to join the PTO, volunteer, donate, and stay connected with our school community.",
+  },
 };
 
 export default function StartHerePage() {
@@ -323,4 +331,5 @@ export default function StartHerePage() {
     </div>
   );
 }
+
 

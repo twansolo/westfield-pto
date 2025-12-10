@@ -145,17 +145,26 @@ export function Footer() {
               </a>{" "}
               PTO. All rights reserved.
             </p>
-            <p className="text-sm text-gray-500">
-              Part of the{" "}
-              <a 
-                href="https://www.linnmar.k12.ia.us/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-primary font-semibold hover:text-primary-light transition-colors"
+            <div className="flex items-center gap-4 text-sm text-gray-500">
+              <Link
+                href="/privacy-policy"
+                className="hover:text-white transition-colors"
               >
-                Linn-Mar Community School District
-              </a>
-            </p>
+                Privacy Policy
+              </Link>
+              <span className="text-gray-700">•</span>
+              <span>
+                Part of the{" "}
+                <a 
+                  href="https://www.linnmar.k12.ia.us/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary font-semibold hover:text-primary-light transition-colors"
+                >
+                  Linn-Mar Community School District
+                </a>
+              </span>
+            </div>
           </div>
         </div>
       </div>

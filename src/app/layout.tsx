@@ -60,14 +60,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google Tag (gtag.js) - Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-Q68B6RJL7L"
-          strategy="beforeInteractive"
-        />
-        <Script
-          id="google-analytics"
-          strategy="beforeInteractive"
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q68B6RJL7L"></script>
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];

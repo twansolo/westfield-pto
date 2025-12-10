@@ -72,6 +72,27 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Google tag (gtag.js) event - delayed navigation helper */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Helper function to delay opening a URL until a gtag event is sent.
+              // Call it in response to an action that should navigate to a URL.
+              function gtagSendEvent(url) {
+                var callback = function () {
+                  if (typeof url === 'string') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'mcforms_email_captured', {
+                  'event_callback': callback,
+                  'event_timeout': 2000,
+                });
+                return false;
+              }
+            `,
+          }}
+        />
       </head>
       <body
         className={`${playfair.variable} ${sourceSans.variable} antialiased font-[family-name:var(--font-source-sans)]`}
